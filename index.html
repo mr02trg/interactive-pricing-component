@@ -8,32 +8,63 @@
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="container">
+    <div class="intro-wrapper">
+      <div class="intro">
+        <div class="intro__heading">Simple, traffic-based pricing</div>
+        <div class="intro__subheading">Sign-up for our 30-day trial. No credit card required.</div>
+      </div>
+    </div>
+    <div class="pricing__card">
+      <div class="pricing__summary">
+        <div class="pageviews">50k pageviews</div>
+        <div class="pricing__amount"><span class="highlight">$16.00</span> / <span class="cycle">month</span></div>
+        <div class="pricing__slider__container">
+          <input type="range" min="1" max="100" value="50" class="pricing__slider">
+        </div>
+      </div>
+      <div class="billing__period">
+        <div class="billing__cycle">Monthly Billing</div>
+        <label class="switch">
+          <input type="checkbox" class="toggle__checkbox">
+          <div class="toggle"></div>
+        </label>
+        <div class="billing__cycle">Yearly Billing</div>
+        <div class="discount">
+          25% discount
+        </div>
+      </div>
+      <div class="pricing__footer">
+        <div class="benefits">
+          <div class="benefit__item">Unlimited websites</div>
+          <div class="benefit__item">100% data ownership</div>
+          <div class="benefit__item">Email reports</div>          
+        </div>
+        <div class="start__my__trial__wrapper">
+          <button type="button" class="start__my__trial">
+            Start my trial
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+  
+  
 
-  Pageviews
-  $ /month
 
-  Monthly Billing
-  Yearly Billing 25% discount
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+  
 
-  Start my trial
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="main.js" async defer></script>
 </body>
 </html>
