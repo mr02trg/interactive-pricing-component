@@ -12,7 +12,7 @@
 body {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   font-family: 'Manrope', sans-serif;
   width: 100%;
   min-height: 100vh;
@@ -53,6 +53,7 @@ body {
   padding-top: 40px;
   padding-bottom: 30px;
   border-radius: 10px;
+  box-shadow: 4px 4px 5px 5px hsl(226, 100%, 87%, .2);
 }
 .pricing__summary {
   display: grid;
@@ -208,7 +209,48 @@ body {
   font-size: 15px;
 }
 
+@media screen and (max-width: 765px) {
+  .container {
+    width: 100%;
+  }
 
+  .pricing__summary {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
 
-.attribution { font-size: 11px; text-align: center; }
+  .pricing__summary .pageviews {
+    grid-column: unset;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 30px;
+  }
+  .pricing__summary .pricing__amount {
+    grid-column: unset;
+    grid-row: 3/4;
+    justify-content: center;
+  }
+  .pricing__slider__container {
+    grid-column: unset;
+    grid-row: 2/3;
+  }
+  .billing__period {
+    justify-content: center;
+  }
+  .pricing__footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .benefits {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+.attribution { 
+  position: absolute; 
+  font-size: 11px; 
+  text-align: center; 
+  bottom: 5px;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
